@@ -2,7 +2,7 @@
 # Decide how to greet them
 # Print the greeting with each of their names
 
-friends = ["Stevesy", "Medge", "Berserkavor"]
+friends = ["Stevesy", "Medge", "Marcus"]
 
 greeting = "Yo what up, "
 

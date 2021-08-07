@@ -20,6 +20,9 @@
 
 # If they don't have the sword, then they will be eaten by the dragon and lose the game.
 
+#https://dev.to/picardcharlie/my-new-cli-rpg-agj 
+#quick write up on it.
+
 print("Welcome to Xin Shijie!")
 character_name = input("Please traveler, tell us your name: ")
 print(f"We are so pleased to meet you {character_name}.")

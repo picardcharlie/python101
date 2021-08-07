@@ -10,3 +10,10 @@ print(num_1 % 7) #This one is
 print(num_2 % 7) #Nope
 print(num_3 % 7) #Yes
 print(num_4 % 7) #No
+
+numbers = [42,137,455,1997]
+for number in numbers:
+    if number % 7 == 0:
+        print(number, " is divisible by 7.")
+
+print(numbers[0])

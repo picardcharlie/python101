@@ -32,3 +32,7 @@ for x in range(stars):
     print("* " * (x + 1))
 
 # Why does it say to think of nested loops?  This took me way to long.
+
+for y in range(stars):
+    for z in range(y):
+        print("* ",end = '')

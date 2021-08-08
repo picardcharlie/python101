@@ -20,7 +20,7 @@ for files in current_directory.iterdir():
 
 # if it's a directory, change to it
     if files.is_dir() == True:
-        sub_directory = currentdirectory.joinpath(files.name)
+        sub_directory = current_directory.joinpath(files.name)
 
 # go through directory and print all .jpg
         for sub_files in sub_directory.iterdir():

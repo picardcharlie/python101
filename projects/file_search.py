@@ -12,11 +12,11 @@ import pathlib
 
 # path to the current directory
 current_directory = pathlib.Path().cwd()
-
+print(current_directory)
 for files in current_directory.iterdir():
 #if it's a .jpg file, print the name.
     if files.suffix == ".jpg":
-        print(files)
+        print(files.name)
 
 # if it's a directory, change to it
     if files.is_dir() == True:
@@ -26,7 +26,7 @@ for files in current_directory.iterdir():
         for sub_files in sub_directory.iterdir():
 
             if sub_files.suffix == ".jpg":
-                print(sub_files)
+                print(sub_files.name)
 
 # Check the sub-sub directory for them.
             if sub_files.is_dir() == True:
@@ -35,4 +35,4 @@ for files in current_directory.iterdir():
                 for base in basement_files.iterdir():
 
                     if base.suffix == ".jpg":
-                        print(base)
+                        print(base.name)

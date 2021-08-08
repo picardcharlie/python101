@@ -1,4 +1,5 @@
 # Write a script that renames all the files in a folder, giving them a default name and an incrementing counter.
+# https://dev.to/picardcharlie/file-renaming-script-1pil
 
 import pathlib
 import sys

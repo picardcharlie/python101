@@ -22,9 +22,25 @@
 
 #https://dev.to/picardcharlie/my-new-cli-rpg-agj 
 #quick write up on it.
+import requests
+
 
 print("Welcome to Xin Shijie!")
-character_name = input("Please traveler, tell us your name: ")
+while True:
+    player_name_input = input("Please traveler, tell us your name so we can give you one from ours: ")
+    if type(player_name_input) == str and len(player_name_input) >= 2 and len(player_name_input) <= 40:
+        break
+    else:
+        print("Your name must be between 2 and 40 characters in length and use a character in it, please.")
+
+
+
+name_min = len(player_name_input)
+name_max = name_min
+generate_name_url = f"https://uzby.com/api.php?min={name_min}&max={name_max}"
+name_request = requests.get(generate_name_url)
+character_name = name_request.text
+
 print(f"We are so pleased to meet you {character_name}.")
 
 input("...")

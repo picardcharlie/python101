@@ -22,6 +22,9 @@
 
 #https://dev.to/picardcharlie/my-new-cli-rpg-agj 
 #quick write up on it.
+
+# weather API URL = "https://www.metaweather.com/api/"
+
 import requests
 
 
@@ -33,8 +36,6 @@ while True:
     else:
         print("Your name must be between 2 and 40 characters in length and use a character in it, please.")
 
-
-
 name_min = len(player_name_input)
 name_max = name_min
 generate_name_url = f"https://uzby.com/api.php?min={name_min}&max={name_max}"
@@ -42,6 +43,15 @@ name_request = requests.get(generate_name_url)
 character_name = name_request.text
 
 print(f"We are so pleased to meet you {character_name}.")
+
+# Weather API to get the current "random" weather from Hong Kong. woeid	2165352
+weather_url = "https://www.metaweather.com/api/location/2165352/"
+response = requests.get(weather_url).json()
+
+current_weather = response['consolidated_weather'][0]['weather_state_name']
+
+print(f"You arrive on a {current_weather.lower()} day, ready to enjoy your pancake picnic.")
+
 
 input("...")
 input("...")
